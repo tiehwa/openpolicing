@@ -1,0 +1,9 @@
+import numpy as np
+import pandas as pd
+import nltk 
+
+yelp = pd.read_csv("yelp.csv")
+
+plt1 = yelp[['stars','cool', 'useful', 'funny']].groupby(yelp.stars).sum()
+plt.plot(plt1[['cool', 'useful', 'funny']], 'o')
+plt.legend
